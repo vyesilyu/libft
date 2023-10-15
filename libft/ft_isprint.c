@@ -6,11 +6,11 @@
 /*   By: Vyesilyu <Vyesilyu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:51:20 by Vyesilyu          #+#    #+#             */
-/*   Updated: 2023/10/09 20:54:36 by Vyesilyu         ###   ########.fr       */
+/*   Updated: 2023/10/15 16:58:01 by Vyesilyu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprintf(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
