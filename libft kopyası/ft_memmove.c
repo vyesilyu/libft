@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Vyesilyu <Vyesilyu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 20:38:59 by Vyesilyu          #+#    #+#             */
-/*   Updated: 2023/10/14 15:03:40 by Vyesilyu         ###   ########.fr       */
+/*   Created: 2023/10/13 17:05:55 by Vyesilyu          #+#    #+#             */
+/*   Updated: 2023/10/20 16:42:43 by Vyesilyu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
 
-	if (!haystack || !needle)
+	if (!dst && !src)
 		return (NULL);
-	if (!needle || !needle[0])
-		return ((char *)haystack);
-	i = 0;
-	while (haystack[i] && i < len)
+	if (dst > src)
 	{
-		j = 0;
-		while (haystack[i + j] && needle[j]
-			&& (i + j) < len && haystack[i + j] == needle[j])
-			j++;
-		if (!needle[j])
-			return ((char *)(haystack + i));
-		i++;
+		i = (int)len - 1;
+		while (i >= 0)
+		{
+			*(char *)(dst + i) = *(char *)(src + i);
+			i--;
+		}
 	}
-	return (NULL);
+	else
+	{
+		i = 0;
+		while (i < (int)len)
+		{
+			*(char *)(dst + i) = *(char *)(src + i);
+			i++;
+		}
+	}
+	return (dst);
 }

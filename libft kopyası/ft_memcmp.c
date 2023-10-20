@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Vyesilyu <Vyesilyu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 14:16:27 by Vyesilyu          #+#    #+#             */
-/*   Updated: 2023/10/14 16:51:41 by Vyesilyu         ###   ########.fr       */
+/*   Created: 2023/10/13 20:32:05 by Vyesilyu          #+#    #+#             */
+/*   Updated: 2023/10/20 12:47:16 by Vyesilyu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
-	size_t			j;
-	char			*str;
+	size_t	i;
 
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-		return (NULL);
-	i = start;
-	j = 0;
-	while (s[i] && j < len)
+	i = 0;
+	while (i < n)
 	{
-		str[j] = str[i];
-		j++;
+		if (*(unsigned char *)(s1 + i) != *(unsigned char *)(s2 + i))
+			return (*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
 		i++;
 	}
-	str[j] = '\0';
-	return (str);
+	return (0);
 }

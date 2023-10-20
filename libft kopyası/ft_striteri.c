@@ -6,7 +6,7 @@
 /*   By: Vyesilyu <Vyesilyu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:50:27 by Vyesilyu          #+#    #+#             */
-/*   Updated: 2023/10/15 16:55:31 by Vyesilyu         ###   ########.fr       */
+/*   Updated: 2023/10/20 12:13:11 by Vyesilyu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i])
 	{
-		(*f)(i, s[i]);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }

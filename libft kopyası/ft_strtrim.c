@@ -6,7 +6,7 @@
 /*   By: Vyesilyu <Vyesilyu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 15:41:42 by Vyesilyu          #+#    #+#             */
-/*   Updated: 2023/10/15 16:56:45 by Vyesilyu         ###   ########.fr       */
+/*   Updated: 2023/10/20 12:17:00 by Vyesilyu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	size_t	i;
-	size_t	j;
 	size_t	start;
 	size_t	end;
 

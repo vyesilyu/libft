@@ -6,13 +6,13 @@
 /*   By: Vyesilyu <Vyesilyu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:40:40 by Vyesilyu          #+#    #+#             */
-/*   Updated: 2023/10/15 17:40:43 by Vyesilyu         ###   ########.fr       */
+/*   Updated: 2023/10/20 12:12:40 by Vyesilyu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_toklen(char *s, char c)
+static size_t	ft_toklen(const char *s, char c)
 {
 	size_t	ret;
 
